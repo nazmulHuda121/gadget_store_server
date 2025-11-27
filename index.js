@@ -8,10 +8,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// // Root route
-// app.get('/', (req, res) => {
-//   res.send('Gadget store Server is running!');
-// });
+// Root route
+app.get('/', (req, res) => {
+  res.send('Gadget store Server is running!');
+});
 
 // Use MongoDB URI from .env
 const uri = process.env.DATABASE_URL;
