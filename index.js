@@ -8,10 +8,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Root route
-app.get('/', (req, res) => {
-  res.send('Gadget store Server is running!');
-});
+// // Root route
+// app.get('/', (req, res) => {
+//   res.send('Gadget store Server is running!');
+// });
 
 // Use MongoDB URI from .env
 const uri = process.env.DATABASE_URL;
@@ -29,7 +29,7 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     await client.connect();
-    console.log('MongoDB Connected ✔');
+    console.log('MongoDB Connected!!!');
 
     const productsCollection = client
       .db('gadget_storeDB')
